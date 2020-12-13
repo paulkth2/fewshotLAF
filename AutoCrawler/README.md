@@ -1,7 +1,12 @@
 # AutoCrawler
-Google, Naver multiprocess image crawler (High Quality & Speed & Customizable)
+Google multiprocess image crawler (High Quality & Speed & Customizable)
 
-![](docs/animation.gif)
+<img src="docs/first.png">
+
+<img src="docs/second.png" width="400" height="400">
+
+
+
 
 # How to use
 
@@ -9,73 +14,17 @@ Google, Naver multiprocess image crawler (High Quality & Speed & Customizable)
 
 2. pip install -r requirements.txt
 
-3. Write search keywords in keywords.txt
+3. **Run "crawling(keyword)"** which is located in check.py
 
-4. **Run "main.py"**
+4. Files will be downloaded to 'download' directory.
 
-5. Files will be downloaded to 'download' directory.
-
-
-# Arguments
-usage:
-```
-python3 main.py [--skip true] [--threads 4] [--google true] [--naver true] [--full false] [--face false] [--no_gui auto] [--limit 0]
-```
-
-```
---skip true        Skips keyword if downloaded directory already exists. This is needed when re-downloading.
-
---threads 4        Number of threads to download.
-
---google true      Download from google.com (boolean)
-
---naver true       Download from naver.com (boolean)
-
---full false       Download full resolution image instead of thumbnails (slow)
-
---face false       Face search mode
-
---no_gui auto      No GUI mode. (headless mode) Acceleration for full_resolution mode, but unstable on thumbnail mode.
-                   Default: "auto" - false if full=false, true if full=true
-                   (can be used for docker linux system)
-                   
---limit 0          Maximum count of images to download per site. (0: infinite)
-```
+**NOTE**: Make sure that the python shell is inside AutoCrawler folder.
 
 
-# Full Resolution Mode
+# What it does
 
-You can download full resolution image of JPG, GIF, PNG files by specifying --full true
-
-![](docs/full.gif)
-
-
-
-# Data Imbalance Detection
-
-Detects data imbalance based on number of files.
-
-When crawling ends, the message show you what directory has under 50% of average files.
-
-I recommend you to remove those directories and re-download.
-
-
-# Remote crawling through SSH on your server
-
-```
-sudo apt-get install xvfb <- This is virtual display
-
-sudo apt-get install screen <- This will allow you to close SSH terminal while running.
-
-screen -S s1
-
-Xvfb :99 -ac & DISPLAY=:99 python3 main.py
-```
-
-# Customize
-
-You can make your own crawler by changing collect_links.py
+It crawls google and downloads 10 full resolution images and then resizes every image to 500x500. 
 
 # Issues
 
-As google site consistently changes, please make issues if it doesn't work.
+It is a customized version of https://github.com/YoongiKim/AutoCrawler. 
