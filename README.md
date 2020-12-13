@@ -4,6 +4,18 @@ Our Repo consists of three major parts.
 
 Each parts include their on README files with instructions, so follow the steps there.
 
+### Running Environment
+Our project ran on a local machine.
+OS : Linux Mint 20 Cinnamon
+CPU : Ryzen 3900X
+GPU : RTX 3090
+RAM : 64GB
+
+Please note that some instructions might not work, especially those related to the training part, due to graphic card memory issue. In this case you have to modify batch size and learning rate to fit the memory.
+
+OS should be Linux since our base library supports only Linux.
+
+
 ## Crawler
 Crawler crawls images by keyword from internet.
 
