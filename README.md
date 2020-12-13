@@ -46,3 +46,5 @@ Detailed steps to train with new objects are written in
 https://github.com/paulkth2/fewshotLAF/few-shot-object-detection
 
 The full instruction regarding the library could be found on the original repo.
+
+contributors: paulkth2, ellaide, sml0399, Tselmuun0624
